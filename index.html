@@ -1,4 +1,4 @@
-<!DOCTYPE HTML><html class="exporting wf-loading"><head><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/><title>WanderWalt Club - WanderWalt</title><link href="rss.xml" title="WanderWalt Club feed" rel="alternate" type="application/rss+xml"/><meta name="generator" content="The Grid taylor/0.16.25"><meta name="the-grid-solution" content="1ce8d335-bd0e-439c-85fe-d1e99e39f6f2"><style href="./css/scale/mini.css" media="(max-width: 19.9376em)" rel="stylesheet">@media (max-width: 15.625em){html{font-size:3.09375em !important}}
+<!DOCTYPE HTML><html class="exporting wf-loading"><head><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/><title>WanderWalt Club - WanderWalt</title><link href="rss.xml" title="WanderWalt Club feed" rel="alternate" type="application/rss+xml"/><meta name="generator" content="The Grid taylor/0.17.3"><meta name="the-grid-solution" content="6191b308-fb93-428c-9ec4-245885b24d18"><style href="./css/scale/mini.css" media="(max-width: 19.9376em)" rel="stylesheet">@media (max-width: 15.625em){html{font-size:3.09375em !important}}
 @media (min-width: 15.6875em)and (max-width: 15.75em){	html{font-size:3.28125em !important}}
 @media (min-width: 15.8125em)and (max-width: 16.25em){	html{font-size:3.375em !important}}
 @media (min-width: 16.3125em)and (max-width: 16.6875em){html{font-size:3.46875em !important}}
@@ -202,6 +202,14 @@ body {
 }
 .stack {
   z-index: 1;
+  transition: transform 0.3s ease-out;
+  -webkit-transition: -webkit-transform 0.3s ease-out;
+}
+.group,
+.aside,
+.decoration {
+  transition: transform 0.3s ease-out;
+  -webkit-transition: -webkit-transform 0.3s ease-out;
 }
 picture {
   display: inline-block;
@@ -250,6 +258,9 @@ a:active {
   transition: color 0.1s ease-in, background-color 0.1s ease-out;
   -webkit-transition: color 0.1s ease-in, background-color 0.1s ease-out;
 }
+a.aside {
+  display: inline-block;
+}
 html.exporting a {
   transition: none;
 }
@@ -259,11 +270,21 @@ html.exporting a {
 .media > a {
   display: inline-block;
 }
+.media iframe {
+  transition: 0.3s opacity ease-in;
+  -webkit-transition: 0.3s opacity ease-in;
+}
 h1 a,
 h2 a,
 h3 a {
   font-weight: inherit;
   letter-spacing: inherit;
+}
+a {
+  -webkit-box-decoration-break: clone;
+  -ms-box-decoration-break: clone;
+  -moz-box-decoration-break: clone;
+  box-decoration-break: clone;
 }
 .text-decoration {
   -webkit-box-decoration-break: clone;
@@ -277,36 +298,50 @@ h3 a {
   margin-left: 1.5em;
 }
 .decoration {
-  position: relative;
   pointer-events: none;
+}
+.svg {
+  position: relative;
   background-color: currentColor;
 }
-.decoration > svg {
+.svg > svg {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
 }
-.decoration.connector > svg {
+.svg.connector > svg {
   width: 109%;
   height: 109%;
   margin-left: -2%;
 }
-.decoration path,
-.decoration ellipse,
-.decoration rect,
-.decoration polygon,
-.decoration circle {
+.svg path,
+.svg ellipse,
+.svg rect,
+.svg polygon,
+.svg circle {
   fill: currentColor;
 }
-.decoration mpath,
-.decoration line,
-.decoration polyline {
+.svg mpath,
+.svg line,
+.svg polyline {
   stroke: currentColor;
 }
-.svg.decoration {
+.svg {
   background-color: transparent;
+}
+.revealed .play.svg:after {
+  display: block;
+  width: 40px;
+  height: 40px;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  margin-top: -20px;
+  margin-left: -20px;
+  background-color: currentColor;
+  content: "";
 }
 .colors-style-aside-border .publisher,
 .colors-style-aside-border .author {
@@ -430,15 +465,15 @@ ul {
 #u-d9f447fc-75bf-4119-a919-bc9299173970-nav#u-d9f447fc-75bf-4119-a919-bc9299173970-nav { background-color: rgb(242, 242, 243); }
 #u-d9f447fc-75bf-4119-a919-bc9299173970-mobile-l-one-l-one#u-d9f447fc-75bf-4119-a919-bc9299173970-mobile-l-one-l-one { background-color: rgb(222, 223, 224); }
 #u-d9f447fc-75bf-4119-a919-bc9299173970-mobile-l-one-2#u-d9f447fc-75bf-4119-a919-bc9299173970-mobile-l-one-2{position: relative;}
-#u-d9f447fc-75bf-4119-a919-bc9299173970-mobile-l-one-2-l-one#u-d9f447fc-75bf-4119-a919-bc9299173970-mobile-l-one-2-l-one{position: relative; display: block; width: 4.804rem; height: 4.724rem; top: 0rem; left: 0rem;}
-#u-9921a2fc-5371-4b5e-b705-c5236af99d5e#u-9921a2fc-5371-4b5e-b705-c5236af99d5e{outline-width: 0.084rem; font-size: 0.164rem; line-height: 0.204rem; height: 4.724rem; width: 4.804rem; position: absolute; top: 0.494rem; left: 0rem;}
+#u-d9f447fc-75bf-4119-a919-bc9299173970-mobile-l-one-2-l-one#u-d9f447fc-75bf-4119-a919-bc9299173970-mobile-l-one-2-l-one{position: relative; display: block; width: 4.804rem; height: 4.844rem; top: 0rem; left: 0rem;}
+#u-9921a2fc-5371-4b5e-b705-c5236af99d5e#u-9921a2fc-5371-4b5e-b705-c5236af99d5e{outline-width: 0.084rem; font-size: 0.164rem; line-height: 0.204rem; height: 4.844rem; width: 4.804rem; position: absolute; top: 0.494rem; left: 0rem;}
 #u-9921a2fc-5371-4b5e-b705-c5236af99d5e#u-9921a2fc-5371-4b5e-b705-c5236af99d5e:before{}
 #u-9921a2fc-5371-4b5e-b705-c5236af99d5e >.group.textual { text-align: left; }
 #u-9921a2fc-5371-4b5e-b705-c5236af99d5e >.group.textual >.data.list { text-align: left; }
-#u-9921a2fc-5371-4b5e-b705-c5236af99d5e-g-textual#u-9921a2fc-5371-4b5e-b705-c5236af99d5e-g-textual{opacity: 1; font-size: 0.164rem; outline: 0.164rem; line-height: 0.244rem; height: 4.244rem; width: 4.324rem; position: absolute; top: 0.244rem; left: 0.244rem;}
+#u-9921a2fc-5371-4b5e-b705-c5236af99d5e-g-textual#u-9921a2fc-5371-4b5e-b705-c5236af99d5e-g-textual{opacity: 1; font-size: 0.164rem; outline: 0.164rem; line-height: 0.244rem; height: 4.364rem; width: 4.324rem; position: absolute; top: 0.244rem; left: 0.244rem;}
 #u-9921a2fc-5371-4b5e-b705-c5236af99d5e-g-textual-t-headline#u-9921a2fc-5371-4b5e-b705-c5236af99d5e-g-textual-t-headline{font-size: 0.524rem; line-height: 0.684rem; width: 4.084rem; position: absolute; top: 0.124rem; left: 0.124rem;}
 #u-9921a2fc-5371-4b5e-b705-c5236af99d5e-g-textual-t-paragraph#u-9921a2fc-5371-4b5e-b705-c5236af99d5e-g-textual-t-paragraph{font-size: 0.244rem; line-height: 0.364rem; width: 4.084rem; position: absolute; top: 1.534rem; left: 0.124rem;}
-#u-9921a2fc-5371-4b5e-b705-c5236af99d5e-g-textual-d-list#u-9921a2fc-5371-4b5e-b705-c5236af99d5e-g-textual-d-list{font-size: 0.164rem; line-height: 0.244rem; width: 4.084rem; position: absolute; top: 2.684rem; left: 0.124rem;}
+#u-9921a2fc-5371-4b5e-b705-c5236af99d5e-g-textual-d-list#u-9921a2fc-5371-4b5e-b705-c5236af99d5e-g-textual-d-list{font-size: 0.164rem; line-height: 0.244rem; width: 4.084rem; position: absolute; top: 2.324rem; left: 0.124rem;}
 #u-9921a2fc-5371-4b5e-b705-c5236af99d5e#u-9921a2fc-5371-4b5e-b705-c5236af99d5e .group.textual > .title.headline { color: rgb(15, 83, 87); }
 #u-9921a2fc-5371-4b5e-b705-c5236af99d5e#u-9921a2fc-5371-4b5e-b705-c5236af99d5e .group.textual > .title.headline a:hover { color: rgb(15, 83, 87); }
 #u-9921a2fc-5371-4b5e-b705-c5236af99d5e#u-9921a2fc-5371-4b5e-b705-c5236af99d5e .group.textual > .text.paragraph { color: rgb(11, 62, 65); }
@@ -454,7 +489,7 @@ ul {
 #u-d9f447fc-75bf-4119-a919-bc9299173970-mobile-l-one-2-l-one#u-d9f447fc-75bf-4119-a919-bc9299173970-mobile-l-one-2-l-one { background-color: rgb(249, 249, 249); }
 #u-d9f447fc-75bf-4119-a919-bc9299173970-mobile-l-one-3#u-d9f447fc-75bf-4119-a919-bc9299173970-mobile-l-one-3{position: relative;}
 #u-d9f447fc-75bf-4119-a919-bc9299173970-mobile-l-one-3-l-one#u-d9f447fc-75bf-4119-a919-bc9299173970-mobile-l-one-3-l-one{position: relative; display: block; width: 4.804rem; height: 0.494rem; top: 0rem; left: 0rem;}
-#u-d9f447fc-75bf-4119-a919-bc9299173970-alternate#u-d9f447fc-75bf-4119-a919-bc9299173970-alternate{font-size: 0.164rem; line-height: 0.204rem; height: 0.494rem; width: 4.804rem; position: absolute; top: 5.214rem; left: 0rem;}
+#u-d9f447fc-75bf-4119-a919-bc9299173970-alternate#u-d9f447fc-75bf-4119-a919-bc9299173970-alternate{font-size: 0.164rem; line-height: 0.204rem; height: 0.494rem; width: 4.804rem; position: absolute; top: 5.334rem; left: 0rem;}
 #u-d9f447fc-75bf-4119-a919-bc9299173970-alternate#u-d9f447fc-75bf-4119-a919-bc9299173970-alternate:before{}
 #u-d9f447fc-75bf-4119-a919-bc9299173970-alternate >.group.heading { text-align: center; }
 #u-d9f447fc-75bf-4119-a919-bc9299173970-alternate-g-heading#u-d9f447fc-75bf-4119-a919-bc9299173970-alternate-g-heading{font-size: 0.164rem; line-height: 0.244rem; height: 0.324rem; width: 4.564rem; position: absolute; top: 0.094rem; left: 0.124rem;}
@@ -564,12 +599,12 @@ display: none;
 #u-d9f447fc-75bf-4119-a919-bc9299173970-nav#u-d9f447fc-75bf-4119-a919-bc9299173970-nav { background-color: rgb(242, 242, 243); }
 #u-d9f447fc-75bf-4119-a919-bc9299173970-desktop-l-one-l-one#u-d9f447fc-75bf-4119-a919-bc9299173970-desktop-l-one-l-one { background-color: rgb(222, 223, 224); }
 #u-d9f447fc-75bf-4119-a919-bc9299173970-desktop-l-one-2#u-d9f447fc-75bf-4119-a919-bc9299173970-desktop-l-one-2{position: relative;}
-#u-d9f447fc-75bf-4119-a919-bc9299173970-desktop-l-one-2-l-one#u-d9f447fc-75bf-4119-a919-bc9299173970-desktop-l-one-2-l-one{position: relative; display: block; width: 9.604rem; height: 5.544rem; left: 0rem; top: 0rem;}
-#u-9921a2fc-5371-4b5e-b705-c5236af99d5e#u-9921a2fc-5371-4b5e-b705-c5236af99d5e{outline-width: 0.084rem; font-size: 0.164rem; line-height: 0.204rem; width: 9.604rem; height: 5.544rem; position: absolute; left: 0rem; top: 0.664rem;}
+#u-d9f447fc-75bf-4119-a919-bc9299173970-desktop-l-one-2-l-one#u-d9f447fc-75bf-4119-a919-bc9299173970-desktop-l-one-2-l-one{position: relative; display: block; width: 9.604rem; height: 6.264rem; left: 0rem; top: 0rem;}
+#u-9921a2fc-5371-4b5e-b705-c5236af99d5e#u-9921a2fc-5371-4b5e-b705-c5236af99d5e{outline-width: 0.084rem; font-size: 0.164rem; line-height: 0.204rem; width: 9.604rem; height: 6.264rem; position: absolute; left: 0rem; top: 0.664rem;}
 #u-9921a2fc-5371-4b5e-b705-c5236af99d5e#u-9921a2fc-5371-4b5e-b705-c5236af99d5e:before{}
 #u-9921a2fc-5371-4b5e-b705-c5236af99d5e >.group.textual { text-align: left; }
 #u-9921a2fc-5371-4b5e-b705-c5236af99d5e >.group.textual >.data.list { text-align: left; }
-#u-9921a2fc-5371-4b5e-b705-c5236af99d5e-g-textual#u-9921a2fc-5371-4b5e-b705-c5236af99d5e-g-textual{opacity: 1; font-size: 0.164rem; outline: 0.164rem; line-height: 0.244rem; width: 4.324rem; height: 4.584rem; position: absolute; left: 2.644rem; top: 0.484rem;}
+#u-9921a2fc-5371-4b5e-b705-c5236af99d5e-g-textual#u-9921a2fc-5371-4b5e-b705-c5236af99d5e-g-textual{opacity: 1; font-size: 0.164rem; outline: 0.164rem; line-height: 0.244rem; width: 4.324rem; height: 5.304rem; position: absolute; left: 2.644rem; top: 0.484rem;}
 #u-9921a2fc-5371-4b5e-b705-c5236af99d5e-g-textual-t-headline#u-9921a2fc-5371-4b5e-b705-c5236af99d5e-g-textual-t-headline{font-size: 0.524rem; line-height: 0.684rem; width: 3.844rem; position: absolute; left: 0.244rem; top: 0.244rem;}
 #u-9921a2fc-5371-4b5e-b705-c5236af99d5e-g-textual-t-paragraph#u-9921a2fc-5371-4b5e-b705-c5236af99d5e-g-textual-t-paragraph{font-size: 0.244rem; line-height: 0.364rem; width: 3.844rem; position: absolute; left: 0.244rem; top: 1.704rem;}
 #u-9921a2fc-5371-4b5e-b705-c5236af99d5e-g-textual-d-list#u-9921a2fc-5371-4b5e-b705-c5236af99d5e-g-textual-d-list{font-size: 0.164rem; line-height: 0.244rem; width: 3.844rem; position: absolute; left: 0.244rem; top: 2.904rem;}
@@ -588,7 +623,7 @@ display: none;
 #u-d9f447fc-75bf-4119-a919-bc9299173970-desktop-l-one-2-l-one#u-d9f447fc-75bf-4119-a919-bc9299173970-desktop-l-one-2-l-one { background-color: rgb(249, 249, 249); }
 #u-d9f447fc-75bf-4119-a919-bc9299173970-desktop-l-one-3#u-d9f447fc-75bf-4119-a919-bc9299173970-desktop-l-one-3{position: relative;}
 #u-d9f447fc-75bf-4119-a919-bc9299173970-desktop-l-one-3-l-one#u-d9f447fc-75bf-4119-a919-bc9299173970-desktop-l-one-3-l-one{position: relative; display: block; width: 9.604rem; height: 0.664rem; top: 0rem; left: 0rem;}
-#u-d9f447fc-75bf-4119-a919-bc9299173970-alternate#u-d9f447fc-75bf-4119-a919-bc9299173970-alternate{font-size: 0.164rem; line-height: 0.204rem; height: 0.664rem; width: 9.604rem; position: absolute; top: 6.204rem; left: 0rem;}
+#u-d9f447fc-75bf-4119-a919-bc9299173970-alternate#u-d9f447fc-75bf-4119-a919-bc9299173970-alternate{font-size: 0.164rem; line-height: 0.204rem; height: 0.664rem; width: 9.604rem; position: absolute; top: 6.924rem; left: 0rem;}
 #u-d9f447fc-75bf-4119-a919-bc9299173970-alternate#u-d9f447fc-75bf-4119-a919-bc9299173970-alternate:before{}
 #u-d9f447fc-75bf-4119-a919-bc9299173970-alternate >.group.heading { text-align: center; }
 #u-d9f447fc-75bf-4119-a919-bc9299173970-alternate-g-heading#u-d9f447fc-75bf-4119-a919-bc9299173970-alternate-g-heading{font-size: 0.164rem; line-height: 0.244rem; height: 0.324rem; width: 9.124rem; position: absolute; top: 0.174rem; left: 0.244rem;}
@@ -813,7 +848,7 @@ wbr.w1800{ display: block }
  #u-d9f447fc-75bf-4119-a919-bc9299173970-desktop-l-one-3 {
 display: none;
 }
-}</style></head><body><div class="layout-system rust mobile" id="page-d9f447fc-75bf-4119-a919-bc9299173970"><section kind="layout" style="position: relative" sequence="one" role="header" diff_index="0" index="one" class="layout one i first_layout w_headline w_title w_separator w_decoration w_leader w_trailer w_icon w_short_headline w_short_title layout one" id="u-d9f447fc-75bf-4119-a919-bc9299173970-mobile-l-one"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles layout one i first_layout last_layout header layout one" id="u-d9f447fc-75bf-4119-a919-bc9299173970-mobile-l-one-l-one"></div></section><section kind="layout" style="position: relative" sequence="one" role="opener" diff_index="0" index="one" class="layout one i w_headline w_title w_paragraph w_text w_list w_data w_separator w_decoration w_leader w_short_headline w_short_title w_short_paragraph w_short_text w_medium_list w_medium_data layout one" id="u-d9f447fc-75bf-4119-a919-bc9299173970-mobile-l-one-2"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles w_texts layout one i first_layout last_layout opener layout one" id="u-d9f447fc-75bf-4119-a919-bc9299173970-mobile-l-one-2-l-one"></div></section><section kind="layout" style="position: relative" sequence="one" role="footer" diff_index="0" index="one" class="layout one i last_layout w_headline w_title w_separator w_decoration w_leader w_trailer w_icon w_short_headline w_short_title layout one" id="u-d9f447fc-75bf-4119-a919-bc9299173970-mobile-l-one-3"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles layout one i first_layout last_layout footer layout one" id="u-d9f447fc-75bf-4119-a919-bc9299173970-mobile-l-one-3-l-one"></div><style id="u-d9f447fc-75bf-4119-a919-bc9299173970-color">body{background-color: rgba(187, 236, 239, 1)}</style></section><article subject="panel" class="col-1 export-linebreaks not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_center uninverted vertical collapsed full line_padding_aside_inside text_width_full group_h_align_none text_align_center flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_small panel stack heading i first_panel last_panel w_headline w_title w_decoration w_short_headline w_short_title stack heading" itemid="u-page-nav" itemtype="nav" diff_index="2" index="heading" kind="stack" score="1.875" missed="0.125" tag="article" id="u-d9f447fc-75bf-4119-a919-bc9299173970-nav"><div kind="group" index="heading" class="group heading group heading" id="u-d9f447fc-75bf-4119-a919-bc9299173970-nav-g-heading"><h1 kind="title" index="headline" class="short short_headline short_title title headline vfld-leader vfld-trailer title headline" specificity="0.25" itemprop="title" id="u-d9f447fc-75bf-4119-a919-bc9299173970-nav-g-heading-t-headline"><a class="text-decoration" href="index.html" id="u-d9f447fc-75bf-4119-a919-bc9299173970-nav-g-heading-t-headline-a">WanderWalt Club</a></h1></div></article><article subject="feature" class="col-1 export-linebreaks uninverted horizontal color_adjust_none color_styles_border_thick color_schema_default stack_transparency_off v_emphasis_none h_emphasis_equal group_overlap_none stack_v_outset_none stack_v_inset_small stack_h_outset_none stack_h_inset_small stack_h_align_center fullscreen_first full line_padding_aside_inside text_width_wide decorations_bar group_h_align_none text_align_left flow_unreversed group_v_outset_none group_v_inset_xsmall group_h_outset_none group_h_inset_xsmall flow_vertical font_size_large feature stack textual i first_feature last_feature w_decoration w_headline w_title w_paragraph w_text w_list w_data w_short_headline w_short_title w_short_paragraph w_short_text w_medium_list w_medium_data stack textual" itemid="9921a2fc-5371-4b5e-b705-c5236af99d5e" itemtype="intro" diff_index="0" index="textual" kind="stack" score="2.75" missed="0.25" tag="article" id="u-9921a2fc-5371-4b5e-b705-c5236af99d5e"><div kind="group" index="textual" class="group textual group textual" id="u-9921a2fc-5371-4b5e-b705-c5236af99d5e-g-textual"><h1 kind="title" index="headline" class="short short_headline short_title title headline vfld-leader title headline" specificity="0.25" itemprop="title" id="u-9921a2fc-5371-4b5e-b705-c5236af99d5e-g-textual-t-headline"><a class="text-decoration" href="wanderwalt-is-here/" id="u-9921a2fc-5371-4b5e-b705-c5236af99d5e-g-textual-t-headline-a">WanderWalt is <wbr class="w480 w960"></wbr>here</a></h1><div kind="text" index="paragraph" class="text-decoration short short_paragraph short_text text paragraph text paragraph" specificity="0.25" itemprop="text" id="u-9921a2fc-5371-4b5e-b705-c5236af99d5e-g-textual-t-paragraph"><p><span class="first-letter">W</span>anderWalt is a passion followers <wbr class="w480 w960"></wbr>club, who wish to <wbr class="w961 w1799"></wbr>live <wbr class="w481"></wbr>life to its <wbr class="w960 w1800"></wbr>fullest. <wbr class="w480"></wbr>We have members who </p></div><ul kind="data" index="list" class="medium medium_list medium_data data list vfld-trailer data list" specificity="0.25" itemprop="list" id="u-9921a2fc-5371-4b5e-b705-c5236af99d5e-g-textual-d-list"><li data-grid-id="d10b8f87-db6d-48e9-a2cc-9b1406c13aee">Do things others hesitate to do</li><li data-grid-id="3be1d26c-1aed-4063-8d23-9e171c5aea3a"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>Travel to destinations without specific plans</li><li data-grid-id="7fe0b266-4af1-43fb-a53b-c0ccbaf5f2b0"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>Accepts challenges to make themselves feel alive</li><li data-grid-id="0d984e2e-3d93-47d4-954c-ccee9f3296ac"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>Creates their own rules for the good cause</li><li data-grid-id="b741b794-d20a-497a-8f56-92df0bca2e04"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>Are always happy to share their experiences good or <wbr class="w480 w960"></wbr>bad with pride</li></ul></div></article><article subject="panel" class="col-1 export-linebreaks not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_center uninverted vertical collapsed full line_padding_aside_inside text_width_full group_h_align_none text_align_center flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_small panel stack heading i first_panel last_panel w_headline w_title w_decoration w_short_headline w_short_title stack heading" itemid="u-page-alternate" itemtype="alternate" diff_index="2" index="heading" kind="stack" score="1.875" missed="0.125" tag="article" id="u-d9f447fc-75bf-4119-a919-bc9299173970-alternate"><div kind="group" index="heading" class="group heading group heading" id="u-d9f447fc-75bf-4119-a919-bc9299173970-alternate-g-heading"><h1 kind="title" index="headline" class="short short_headline short_title title headline vfld-leader vfld-trailer title headline" specificity="0.25" itemprop="title" id="u-d9f447fc-75bf-4119-a919-bc9299173970-alternate-g-heading-t-headline"><a class="text-decoration" href="rss.xml" id="u-d9f447fc-75bf-4119-a919-bc9299173970-alternate-g-heading-t-headline-a">WanderWalt Club feed</a></h1></div></article><section kind="layout" style="position: relative" sequence="one" role="header" diff_index="0" index="one" class="layout one i first_layout w_headline w_title w_separator w_decoration w_leader w_trailer w_icon w_short_headline w_short_title layout one" id="u-d9f447fc-75bf-4119-a919-bc9299173970-desktop-l-one"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles layout one i first_layout last_layout header layout one" id="u-d9f447fc-75bf-4119-a919-bc9299173970-desktop-l-one-l-one"></div></section><section kind="layout" style="position: relative" sequence="one" role="opener" diff_index="0" index="one" class="layout one i w_headline w_title w_paragraph w_text w_list w_data w_separator w_decoration w_leader w_short_headline w_short_title w_short_paragraph w_short_text w_medium_list w_medium_data layout one" id="u-d9f447fc-75bf-4119-a919-bc9299173970-desktop-l-one-2"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles w_texts layout one i first_layout last_layout opener layout one" id="u-d9f447fc-75bf-4119-a919-bc9299173970-desktop-l-one-2-l-one"></div></section><section kind="layout" style="position: relative" sequence="one" role="footer" diff_index="0" index="one" class="layout one i last_layout w_headline w_title w_separator w_decoration w_leader w_trailer w_icon w_short_headline w_short_title layout one" id="u-d9f447fc-75bf-4119-a919-bc9299173970-desktop-l-one-3"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles layout one i first_layout last_layout footer layout one" id="u-d9f447fc-75bf-4119-a919-bc9299173970-desktop-l-one-3-l-one"></div><style id="u-d9f447fc-75bf-4119-a919-bc9299173970-color">body{background-color: rgba(187, 236, 239, 1)}</style></section><section kind="layout" style="position: relative" sequence="one" role="header" diff_index="0" index="one" class="layout one i first_layout w_headline w_title w_separator w_decoration w_leader w_trailer w_icon w_short_headline w_short_title layout one" id="u-d9f447fc-75bf-4119-a919-bc9299173970-cinema-l-one"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles layout one i first_layout last_layout header layout one" id="u-d9f447fc-75bf-4119-a919-bc9299173970-cinema-l-one-l-one"></div></section><section kind="layout" style="position: relative" sequence="one" role="opener" diff_index="0" index="one" class="layout one i w_headline w_title w_paragraph w_text w_list w_data w_separator w_decoration w_leader w_short_headline w_short_title w_short_paragraph w_short_text w_medium_list w_medium_data layout one" id="u-d9f447fc-75bf-4119-a919-bc9299173970-cinema-l-one-2"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles w_texts layout one i first_layout last_layout opener layout one" id="u-d9f447fc-75bf-4119-a919-bc9299173970-cinema-l-one-2-l-one"></div></section><section kind="layout" style="position: relative" sequence="one" role="footer" diff_index="0" index="one" class="layout one i last_layout w_headline w_title w_separator w_decoration w_leader w_trailer w_icon w_short_headline w_short_title layout one" id="u-d9f447fc-75bf-4119-a919-bc9299173970-cinema-l-one-3"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles layout one i first_layout last_layout footer layout one" id="u-d9f447fc-75bf-4119-a919-bc9299173970-cinema-l-one-3-l-one"></div><style id="u-d9f447fc-75bf-4119-a919-bc9299173970-color">body{background-color: rgba(187, 236, 239, 1)}</style></section></div><script href="./client.js">(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+}</style></head><body><div class="layout-system rust mobile" id="page-d9f447fc-75bf-4119-a919-bc9299173970"><section kind="layout" style="position: relative" sequence="one" role="header" diff_index="0" index="one" class="layout one i first_layout w_headline w_title w_separator w_decoration w_leader w_trailer w_icon w_short_headline w_short_title layout one" id="u-d9f447fc-75bf-4119-a919-bc9299173970-mobile-l-one"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles layout one i first_layout last_layout header layout one" id="u-d9f447fc-75bf-4119-a919-bc9299173970-mobile-l-one-l-one"></div></section><section kind="layout" style="position: relative" sequence="one" role="opener" diff_index="0" index="one" class="layout one i w_headline w_title w_paragraph w_text w_list w_data w_separator w_decoration w_leader w_short_headline w_short_title w_short_paragraph w_short_text w_medium_list w_medium_data layout one" id="u-d9f447fc-75bf-4119-a919-bc9299173970-mobile-l-one-2"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles w_texts layout one i first_layout last_layout opener layout one" id="u-d9f447fc-75bf-4119-a919-bc9299173970-mobile-l-one-2-l-one"></div></section><section kind="layout" style="position: relative" sequence="one" role="footer" diff_index="0" index="one" class="layout one i last_layout w_headline w_title w_separator w_decoration w_leader w_trailer w_icon w_short_headline w_short_title layout one" id="u-d9f447fc-75bf-4119-a919-bc9299173970-mobile-l-one-3"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles layout one i first_layout last_layout footer layout one" id="u-d9f447fc-75bf-4119-a919-bc9299173970-mobile-l-one-3-l-one"></div><style id="u-d9f447fc-75bf-4119-a919-bc9299173970-color">body{background-color: rgba(187, 236, 239, 1)}</style></section><article subject="panel" class="col-1 export-linebreaks not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_center uninverted vertical collapsed full line_padding_aside_inside text_width_full group_h_align_none text_align_center flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_small panel stack heading i first_panel last_panel w_headline w_title w_decoration w_short_headline w_short_title stack heading" itemid="u-page-nav" itemtype="nav" diff_index="2" index="heading" kind="stack" score="1.875" missed="0.125" tag="article" id="u-d9f447fc-75bf-4119-a919-bc9299173970-nav"><div kind="group" index="heading" class="group heading group heading" id="u-d9f447fc-75bf-4119-a919-bc9299173970-nav-g-heading"><h1 kind="title" index="headline" class="short short_headline short_title title headline vfld-leader vfld-trailer title headline" specificity="0.25" itemprop="title" id="u-d9f447fc-75bf-4119-a919-bc9299173970-nav-g-heading-t-headline"><a class="text-decoration" href="index.html" id="u-d9f447fc-75bf-4119-a919-bc9299173970-nav-g-heading-t-headline-a">WanderWalt Club</a></h1></div></article><article subject="feature" class="col-1 export-linebreaks uninverted horizontal color_adjust_none color_styles_border_thick color_schema_default stack_transparency_off v_emphasis_none h_emphasis_equal group_overlap_none stack_v_outset_none stack_v_inset_small stack_h_outset_none stack_h_inset_small stack_h_align_center fullscreen_first full line_padding_aside_inside text_width_wide decorations_bar group_h_align_none text_align_left flow_unreversed group_v_outset_none group_v_inset_xsmall group_h_outset_none group_h_inset_xsmall flow_vertical font_size_large feature stack textual i first_feature last_feature w_decoration w_headline w_title w_paragraph w_text w_list w_data w_short_headline w_short_title w_short_paragraph w_short_text w_medium_list w_medium_data stack textual" itemid="9921a2fc-5371-4b5e-b705-c5236af99d5e" itemtype="intro" diff_index="0" index="textual" kind="stack" score="4.25" missed="0.25" tag="article" id="u-9921a2fc-5371-4b5e-b705-c5236af99d5e"><div kind="group" index="textual" class="group textual group textual" id="u-9921a2fc-5371-4b5e-b705-c5236af99d5e-g-textual"><h1 kind="title" index="headline" class="short short_headline short_title title headline vfld-leader title headline" specificity="0.25" itemprop="title" id="u-9921a2fc-5371-4b5e-b705-c5236af99d5e-g-textual-t-headline"><a class="text-decoration" href="wanderwalt-is-here/" id="u-9921a2fc-5371-4b5e-b705-c5236af99d5e-g-textual-t-headline-a">WanderWalt is <wbr class="w480 w960"></wbr>here</a></h1><div kind="text" index="paragraph" class="text-decoration short short_paragraph short_text text paragraph text paragraph" specificity="0.25" itemprop="text" id="u-9921a2fc-5371-4b5e-b705-c5236af99d5e-g-textual-t-paragraph"><p><span class="first-letter">W</span>anderWalt is a passion followers <wbr class="w480 w960"></wbr>club, who wish to <wbr class="w961 w1799"></wbr>live <wbr class="w481"></wbr>life to its <wbr class="w960 w1800"></wbr>fullest.</p></div><ul kind="data" index="list" class="medium medium_list medium_data data list vfld-trailer data list" specificity="0.25" itemprop="list" id="u-9921a2fc-5371-4b5e-b705-c5236af99d5e-g-textual-d-list"><li data-grid-id="ae133281-3f7a-4648-8e70-631d03e01675">People who do<i data-grid-id="6c257215-d3a6-4300-816f-97211257ce6b"></i>things others hesitate to do</li><li data-grid-id="4b805943-a961-491d-bf4f-5693e7594221"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>Those who travel to destinations without specific <wbr class="w960"></wbr>plans</li><li data-grid-id="d318e37c-18fe-4076-9a39-b9670b89eb94"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>Those who accepts challenges to make themselves <wbr class="w960"></wbr>feel <wbr class="w480"></wbr>alive</li><li data-grid-id="d44d313a-9fe6-40a9-9ef9-a936cb88559f"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>The ones who creates their own rules for the good <wbr class="w480 w960"></wbr>cause</li><li data-grid-id="145cead9-60da-4848-82c7-c8f9f9b8ce4c"><wbr class="w480 w481 w960 w961 w1799 w1800"></wbr>Who are always happy to share their experiences <wbr class="w960"></wbr>good <wbr class="w480"></wbr>or bad with pride</li></ul></div></article><article subject="panel" class="col-1 export-linebreaks not_decorated color_adjust_none color_styles_no_group_bg color_schema_default stack_transparency_off v_emphasis_none h_emphasis_none group_overlap_none stack_v_outset_none stack_v_inset_none stack_h_outset_none stack_h_inset_xsmall stack_h_align_center uninverted vertical collapsed full line_padding_aside_inside text_width_full group_h_align_none text_align_center flow_unreversed group_v_outset_none group_v_inset_none group_h_outset_none group_h_inset_xsmall flow_vertical font_size_small panel stack heading i first_panel last_panel w_headline w_title w_decoration w_short_headline w_short_title stack heading" itemid="u-page-alternate" itemtype="alternate" diff_index="2" index="heading" kind="stack" score="1.875" missed="0.125" tag="article" id="u-d9f447fc-75bf-4119-a919-bc9299173970-alternate"><div kind="group" index="heading" class="group heading group heading" id="u-d9f447fc-75bf-4119-a919-bc9299173970-alternate-g-heading"><h1 kind="title" index="headline" class="short short_headline short_title title headline vfld-leader vfld-trailer title headline" specificity="0.25" itemprop="title" id="u-d9f447fc-75bf-4119-a919-bc9299173970-alternate-g-heading-t-headline"><a class="text-decoration" href="rss.xml" id="u-d9f447fc-75bf-4119-a919-bc9299173970-alternate-g-heading-t-headline-a">WanderWalt Club feed</a></h1></div></article><section kind="layout" style="position: relative" sequence="one" role="header" diff_index="0" index="one" class="layout one i first_layout w_headline w_title w_separator w_decoration w_leader w_trailer w_icon w_short_headline w_short_title layout one" id="u-d9f447fc-75bf-4119-a919-bc9299173970-desktop-l-one"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles layout one i first_layout last_layout header layout one" id="u-d9f447fc-75bf-4119-a919-bc9299173970-desktop-l-one-l-one"></div></section><section kind="layout" style="position: relative" sequence="one" role="opener" diff_index="0" index="one" class="layout one i w_headline w_title w_paragraph w_text w_list w_data w_separator w_decoration w_leader w_short_headline w_short_title w_short_paragraph w_short_text w_medium_list w_medium_data layout one" id="u-d9f447fc-75bf-4119-a919-bc9299173970-desktop-l-one-2"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles w_texts layout one i first_layout last_layout opener layout one" id="u-d9f447fc-75bf-4119-a919-bc9299173970-desktop-l-one-2-l-one"></div></section><section kind="layout" style="position: relative" sequence="one" role="footer" diff_index="0" index="one" class="layout one i last_layout w_headline w_title w_separator w_decoration w_leader w_trailer w_icon w_short_headline w_short_title layout one" id="u-d9f447fc-75bf-4119-a919-bc9299173970-desktop-l-one-3"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles layout one i first_layout last_layout footer layout one" id="u-d9f447fc-75bf-4119-a919-bc9299173970-desktop-l-one-3-l-one"></div><style id="u-d9f447fc-75bf-4119-a919-bc9299173970-color">body{background-color: rgba(187, 236, 239, 1)}</style></section><section kind="layout" style="position: relative" sequence="one" role="header" diff_index="0" index="one" class="layout one i first_layout w_headline w_title w_separator w_decoration w_leader w_trailer w_icon w_short_headline w_short_title layout one" id="u-d9f447fc-75bf-4119-a919-bc9299173970-cinema-l-one"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles layout one i first_layout last_layout header layout one" id="u-d9f447fc-75bf-4119-a919-bc9299173970-cinema-l-one-l-one"></div></section><section kind="layout" style="position: relative" sequence="one" role="opener" diff_index="0" index="one" class="layout one i w_headline w_title w_paragraph w_text w_list w_data w_separator w_decoration w_leader w_short_headline w_short_title w_short_paragraph w_short_text w_medium_list w_medium_data layout one" id="u-d9f447fc-75bf-4119-a919-bc9299173970-cinema-l-one-2"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles w_texts layout one i first_layout last_layout opener layout one" id="u-d9f447fc-75bf-4119-a919-bc9299173970-cinema-l-one-2-l-one"></div></section><section kind="layout" style="position: relative" sequence="one" role="footer" diff_index="0" index="one" class="layout one i last_layout w_headline w_title w_separator w_decoration w_leader w_trailer w_icon w_short_headline w_short_title layout one" id="u-d9f447fc-75bf-4119-a919-bc9299173970-cinema-l-one-3"><div kind="layout" style="position: relative" sequence="one" diff_index="0" index="one" class="colors-use-local w_titles layout one i first_layout last_layout footer layout one" id="u-d9f447fc-75bf-4119-a919-bc9299173970-cinema-l-one-3-l-one"></div><style id="u-d9f447fc-75bf-4119-a919-bc9299173970-color">body{background-color: rgba(187, 236, 239, 1)}</style></section></div><script href="./client.js">(function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
 /*! Hammer.JS - v1.1.3 - 2014-05-20
  * http://eightmedia.github.io/hammer.js
  *
@@ -1340,9 +1375,11 @@ global.Hamburger = require('./hamburger');
 
 global.Highlighter = require('./highlighter');
 
+global.Player = require('./player');
+
 
 }).call(this,typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : typeof window !== "undefined" ? window : {})
-},{"./animator":3,"./hamburger":4,"./highlighter":5,"./paginator":7,"hammerjs/hammer.min.js":1,"picturefill/dist/picturefill.min.js":2}],7:[function(require,module,exports){
+},{"./animator":3,"./hamburger":4,"./highlighter":5,"./paginator":7,"./player":8,"hammerjs/hammer.min.js":1,"picturefill/dist/picturefill.min.js":2}],7:[function(require,module,exports){
 var appendPage, mainpage, page, ref, ref1, urls;
 
 page = require('./reflow');
@@ -1443,7 +1480,192 @@ module.exports = function() {
 };
 
 
-},{"./reflow":8}],8:[function(require,module,exports){
+},{"./reflow":9}],8:[function(require,module,exports){
+var Player, Youtube, iframe, revealed, rgb2hex;
+
+iframe = null;
+
+Youtube = null;
+
+Player = function(id, src, width, height, color, bg) {
+  if (src.indexOf('youtube') > -1) {
+    src += '&color=white&theme=light&modestbranding=1';
+  }
+  src = src.replace('COLOR', color).replace('BG', bg);
+  if (location.protocol !== 'https:') {
+    src = src.replace('https:', 'http:');
+  }
+  iframe = document.createElement('iframe');
+  iframe.id = id;
+  iframe.setAttribute('allowfullscreen', '');
+  iframe.src = src;
+  iframe.width = width;
+  iframe.height = height;
+  iframe.style.width = '100%';
+  iframe.style.height = '100%';
+  iframe.style.left = 0;
+  iframe.style.right = 0;
+  iframe.style.position = 'absolute';
+  iframe.style.opacity = 0.2;
+  iframe.onload = function() {
+    return iframe.style.opacity = 1;
+  };
+  return iframe;
+};
+
+revealed = null;
+
+Player.reveal = function(iframe) {
+  var diff, i, left, len, parent, play, ref, ref1, sibling, target, top, translateX, translateY;
+  while (target = (target || iframe).parentNode) {
+    if ((ref = target.classList) != null ? ref.contains('media') : void 0) {
+      if (target.parentNode.classList.contains('group')) {
+        parent = target.parentNode;
+      } else {
+        parent = target;
+      }
+      revealed = iframe;
+      play = parent.getElementsByClassName('play')[0];
+      left = target.offsetWidth - play.offsetLeft - play.offsetWidth;
+      top = -play.offsetTop;
+      play.style.webkitTransformOrigin = 'top right';
+      play.style.webkitTransform = 'translateX(' + left + 'px) translateY(' + top + 'px) scale(0.5)';
+      target.classList.add('revealed');
+      ref1 = parent.parentNode.childNodes;
+      for (i = 0, len = ref1.length; i < len; i++) {
+        sibling = ref1[i];
+        if (sibling.nodeType === 1 && sibling !== parent) {
+          translateX = translateY = null;
+          if ((diff = sibling.offsetLeft + sibling.offsetWidth - parent.offsetLeft) > 2 && parent.offsetLeft >= sibling.offsetLeft) {
+            translateX = -diff;
+          }
+          if ((diff = target.offsetLeft + target.offsetWidth - sibling.offsetLeft) > 2 && parent.offsetLeft <= sibling.offsetLeft) {
+            if (!translateX || Math.abs(diff) < Math.abs(translateX)) {
+              translateX = diff;
+            }
+          }
+          if ((diff = sibling.offsetTop + sibling.offsetHeight - parent.offsetTop) > 2 && parent.offsetTop >= sibling.offsetTop) {
+            translateY = -diff;
+          }
+          if ((diff = target.offsetTop + target.offsetHeight - sibling.offsetTop) > 2 && parent.offsetTop <= sibling.offsetTop) {
+            if (!translateY || Math.abs(diff) < Math.abs(translateY)) {
+              translateY = diff;
+            }
+          }
+          if (Math.abs(translateX) > Math.abs(translateY)) {
+            sibling.style.webkitTransform = 'translateY(' + translateY + 'px)';
+          } else {
+            sibling.style.webkitTransform = 'translateX(' + translateX + 'px)';
+          }
+          console.log(translateX, translateY, sibling);
+        }
+      }
+    }
+  }
+};
+
+Player.hide = function(iframe) {
+  var i, len, parent, play, ref, ref1, sibling;
+  while (parent = (parent || iframe).parentNode) {
+    if ((ref = parent.classList) != null ? ref.contains('revealed') : void 0) {
+      parent.classList.remove('revealed');
+      if (parent.parentNode.classList.contains('group')) {
+        parent = parent.parentNode;
+      }
+      play = parent.getElementsByClassName('play')[0];
+      play.style.webkitTransform = '';
+      ref1 = parent.parentNode.childNodes;
+      for (i = 0, len = ref1.length; i < len; i++) {
+        sibling = ref1[i];
+        sibling.style.webkitTransform = '';
+      }
+    }
+  }
+  return revealed = null;
+};
+
+window.addEventListener('resize', function() {
+  return setTimeout(function() {
+    return requestAnimationFrame(function() {
+      if (revealed) {
+        if (revealed.offsetWidth) {
+          return Player.reveal(revealed);
+        } else {
+          return Player.stop(revealed);
+        }
+      }
+    });
+  }, 10);
+});
+
+Player.stop = function(iframe) {
+  var old;
+  old = iframe;
+  iframe.style.opacity = 0;
+  setTimeout(function() {
+    var ref;
+    return (ref = old.parentNode) != null ? ref.removeChild(old) : void 0;
+  }, 300);
+  Player.hide(iframe);
+  return iframe = null;
+};
+
+document.addEventListener('click', function(e) {
+  var bg, color, header, parent, play, ref, ref1, results, styles, target;
+  target = e.target;
+  results = [];
+  while (target) {
+    if ((ref = target.classList) != null ? ref.contains('media') : void 0) {
+      if (play = target.getElementsByClassName('play')[0]) {
+        if ((iframe != null ? iframe.parentNode : void 0) === target) {
+          Player.stop(iframe);
+        } else {
+          if (iframe) {
+            Player.stop(iframe);
+          }
+          color = bg = null;
+          header = (ref1 = target.parentNode.parentNode.getElementsByClassName('title')[0]) != null ? ref1.firstChild : void 0;
+          parent = header || play;
+          while (parent) {
+            if (parent.nodeType === 1) {
+              styles = window.getComputedStyle(parent);
+              if (styles.color.indexOf('rgba') === -1 || !styles.color.match(/,\s*0\)/)) {
+                if (color == null) {
+                  color = styles.color;
+                }
+              }
+              if (styles['background-color'].indexOf('rgba') === -1 || !styles['background-color'].match(/,\s*0\)/)) {
+                if (bg == null) {
+                  bg = styles['background-color'];
+                }
+              }
+            }
+            parent = parent.parentNode;
+          }
+          iframe = Player(play.id + '-player', play.getAttribute('data-src'), play.getAttribute('data-width'), play.getAttribute('data-height'), rgb2hex(color), rgb2hex(bg));
+          target.appendChild(iframe);
+          Player.reveal(iframe);
+        }
+        e.preventDefault();
+        break;
+      }
+    }
+    results.push(target = target.parentNode);
+  }
+  return results;
+});
+
+rgb2hex = function(rgb) {
+  rgb = rgb.match(/^rgba?[\s+]?\([\s+]?(\d+)[\s+]?,[\s+]?(\d+)[\s+]?,[\s+]?(\d+)[\s+]?/i);
+  if (rgb && rgb.length === 4) {
+    return ("0" + parseInt(rgb[1], 10).toString(16)).slice(-2) + ("0" + parseInt(rgb[2], 10).toString(16)).slice(-2) + ("0" + parseInt(rgb[3], 10).toString(16)).slice(-2);
+  }
+};
+
+window.exports = window.Player = Player;
+
+
+},{}],9:[function(require,module,exports){
 module.exports = {
   reflow: function(container) {
     var counter, heights, hidden, hole, holed, holes, i, id, ids, index, j, k, l, last, layout, layouts, len, len1, len2, len3, m, mutations, name, node, ref, ref1, ref2, stack, stacks;
@@ -1708,7 +1930,7 @@ module.exports = function(callback) {
   } else {
     protocol = '';
   }
-  url = protocol + "//cdn.thegrid.io/gss/gss-document/1.2.4/gss.document.parser.js";
+  url = protocol + "//cdn.thegrid.io/gss/gss-document/1.2.8/gss.document.parser.js";
   if (location.toString().indexOf('//localhost:8080') > -1) {
     return module.exports.load(protocol + "//localhost:8080/node_modules/gss-document/dist/gss.document.parser.js", callback, function() {
       return module.exports.load(url, callback);
