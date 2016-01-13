@@ -3,11 +3,11 @@ inFeed: true
 hasPage: true
 inNav: false
 inLanguage: null
-starred: false
+starred: true
 keywords: []
 description: ''
-datePublished: '2016-01-13T17:02:52.958Z'
-dateModified: '2016-01-13T17:01:44.559Z'
+datePublished: '2016-01-13T17:08:47.766Z'
+dateModified: '2016-01-13T17:08:36.166Z'
 title: WanderWalt is here
 author: []
 authors: []
