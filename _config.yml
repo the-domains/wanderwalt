@@ -1,7 +1,7 @@
 name: WanderWalt
 favicon: null
 layout_spectrum: 1
-typography_spectrum: 0.21488375216722488
+typography_spectrum: 0.63699
 title: WanderWalt Club
 cta:
   domain: null
@@ -22,8 +22,8 @@ color:
     - '#CD5334'
     - '#EDB88B'
     - '#FAD8D6'
-  brandStrength: 0.6403930888045579
-  lightness: 0.7393618356436491
-  saturation: 0.3095056836027652
-  rhythmicContrast: 0.5903555904515088
+  brandStrength: 0.5625
+  lightness: 0.5625
+  saturation: 0.375
+  rhythmicContrast: 0.5
 purpose: []
