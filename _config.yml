@@ -1,0 +1,28 @@
+name: WanderWalt
+favicon: null
+layout_spectrum: 0.8711387489456683
+typography_spectrum: 0.21488375216722488
+cta:
+  domain: null
+  bucket: null
+  version: null
+analytics:
+  google: null
+  facebook: null
+  twitter: null
+opengraph:
+  image: null
+  type: null
+  appId: null
+color:
+  brandColors:
+    - '#17BEBB'
+    - '#2E282A'
+    - '#CD5334'
+    - '#EDB88B'
+    - '#FAD8D6'
+  brandStrength: 0.6403930888045579
+  lightness: 0.7393618356436491
+  saturation: 0.3095056836027652
+  rhythmicContrast: 0.5903555904515088
+purpose: []
