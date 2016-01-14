@@ -6,9 +6,9 @@ inLanguage: null
 starred: true
 keywords: []
 description: ''
-datePublished: '2016-01-13T19:19:45.500Z'
-dateModified: '2016-01-13T19:19:31.286Z'
-title: WanderWalt is here
+datePublished: '2016-01-14T08:22:31.796Z'
+dateModified: '2016-01-14T08:22:24.366Z'
+title: WanderWalt Club
 author: []
 sourcePath: _posts/2016-01-13-wanderwalt-is-here.md
 published: true
@@ -22,14 +22,19 @@ url: wanderwalt-is-here/index.html
 _type: Article
 
 ---
-# WanderWalt is here
+# WanderWalt Club
+![wanderwalt](https://the-grid-user-content.s3-us-west-2.amazonaws.com/a2055b7c-34d1-44a8-8cfb-6c923eb91927.jpg)
 
-WanderWalt is a passion followers club, who wish to live life to its fullest.
+WanderWalt is a secret club of day dreamers outside but doers inside, who wish to live life to its fullest.
 
-* People who do__things others hesitate to do
-* Those who travel to destinations without specific plans
-* Those who accepts challenges to make themselves feel alive
-* The ones who creates their own rules for the good cause
-* Who are always happy to share their experiences good or bad with pride
+## THIS PLACE IS MEANT FOR 
 
-Join the club and you will feel rejuvenated. We have lovers, seekers, dreamers, doers, bosses, employees, mentors, entrepreneurs, bikers, rockers and all sorts of **Walt****ers******(as we call each other), accommodated under one strict rule **save yourself from stress**.
+* People who wish to do__ things others hesitate to do
+* People who wish to travel to destinations without specific plans
+* People who wish to accepts challenges to make themselves feel alive
+* People who wish to creates their own rules for the good cause
+* People who are always happy to share their experiences, good or bad, with pride
+
+> DREAM WITHOUT ACTION PLAN IS ONLY A WISH 
+
+To Join the club, you will have to find one of us and get referred  by a Walt . We have lovers, seekers, dreamers, doers, bosses, employees, mentors, entrepreneurs, bikers, rockers and all sorts of **Walt****s **(as we call each other), brought together under one strict rule **stop surviving and start living****.******
