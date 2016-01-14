@@ -6,8 +6,8 @@ inLanguage: null
 starred: true
 keywords: []
 description: ''
-datePublished: '2016-01-14T08:22:31.796Z'
-dateModified: '2016-01-14T08:22:24.366Z'
+datePublished: '2016-01-14T08:26:20.750Z'
+dateModified: '2016-01-14T08:26:15.107Z'
 title: WanderWalt Club
 author: []
 sourcePath: _posts/2016-01-13-wanderwalt-is-here.md
