@@ -1,13 +1,13 @@
 ---
 inFeed: true
 hasPage: true
-inNav: false
+inNav: true
 inLanguage: null
 starred: false
 keywords: []
-description: ''
-datePublished: '2016-01-14T08:29:43.417Z'
-dateModified: '2016-01-14T08:29:31.074Z'
+description: A secret club of walts
+datePublished: '2016-01-14T08:52:48.177Z'
+dateModified: '2016-01-14T08:52:43.712Z'
 title: WanderWalt Club
 author: []
 sourcePath: _posts/2016-01-13-wanderwalt-is-here.md
@@ -29,11 +29,11 @@ WanderWalt is a secret club of day dreamers outside but doers inside, who wish t
 
 ## THIS PLACE IS MEANT FOR 
 
-* People who wish to do__ things others hesitate to do
-* People who wish to travel to destinations without specific plans
-* People who wish to accepts challenges to make themselves feel alive
-* People who wish to creates their own rules for the good cause
-* People who are always happy to share their experiences, good or bad, with pride
+People who wish to do things others hesitate to do  
+People who wish to travel to destinations without specific plans  
+People who wish to accepts challenges to make themselves feel alive  
+People who wish to creates their own rules for the good cause  
+People who are always happy to share their experiences, good or bad, with pride
 
 > DREAM WITHOUT PLAN IS JUST A WISH 
 
