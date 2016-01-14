@@ -3,11 +3,11 @@ inFeed: true
 hasPage: true
 inNav: false
 inLanguage: null
-starred: true
+starred: false
 keywords: []
 description: ''
-datePublished: '2016-01-14T08:26:20.750Z'
-dateModified: '2016-01-14T08:26:15.107Z'
+datePublished: '2016-01-14T08:29:43.417Z'
+dateModified: '2016-01-14T08:29:31.074Z'
 title: WanderWalt Club
 author: []
 sourcePath: _posts/2016-01-13-wanderwalt-is-here.md
@@ -35,6 +35,6 @@ WanderWalt is a secret club of day dreamers outside but doers inside, who wish t
 * People who wish to creates their own rules for the good cause
 * People who are always happy to share their experiences, good or bad, with pride
 
-> DREAM WITHOUT ACTION PLAN IS ONLY A WISH 
+> DREAM WITHOUT PLAN IS JUST A WISH 
 
-To Join the club, you will have to find one of us and get referred  by a Walt . We have lovers, seekers, dreamers, doers, bosses, employees, mentors, entrepreneurs, bikers, rockers and all sorts of **Walt****s **(as we call each other), brought together under one strict rule **stop surviving and start living****.******
+We plan it together and make things possible. To Join the club, you will have to find one of us and get referred  by a Walt. Finding us is easy, we have lovers, seekers, dreamers, doers, bosses, employees, mentors, entrepreneurs, bikers, rockers and all sorts of **Walt****s **(as we call each other), brought together under one strict rule **stop surviving and start living****.**
