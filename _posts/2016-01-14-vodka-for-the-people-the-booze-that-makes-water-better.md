@@ -4,7 +4,7 @@ hasPage: false
 inNav: false
 isBasedOnUrl: 'http://fathomaway.com/postcards/good/interview-absolute-elyx-vodka/'
 inLanguage: en
-starred: false
+starred: true
 keywords:
   - vodka
   - water
@@ -17,8 +17,8 @@ keywords:
   - peru
   - purpose
 description: "In the season of holiday parties and holiday drinking, we were glad to find a bottle of booze that does double duty. (It makes the night fun and the world better.) Elyx vodka's Tom Roberts tells us about their collaboration with Water for People, a leading water NGO that want to keep the world hydrated."
-datePublished: '2016-01-14T08:50:09.819Z'
-dateModified: '2016-01-14T08:49:54.286Z'
+datePublished: '2016-01-14T08:53:10.243Z'
+dateModified: '2016-01-14T08:53:03.315Z'
 author:
   - name: Tom Roberts
     url: 'http://fathomaway.com/author/tom-roberts/'
